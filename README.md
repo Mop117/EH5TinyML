@@ -16,15 +16,16 @@ Platform: Particle Photon 2 (ARM Cortex-M33)
 
 Sensor: PDM microphone for capturing engine audio
 
+Communication: TCP transfer to laptop for data logging
+
 Preprocessing:
 
-Audio segmentation (2–4 second windows)
+Audio segmentation
 
-Spectrogram / MFCC feature extraction
+feature extraction
 
 Model: TinyML classification model (normal vs. faulty idle)
 
-Communication: TCP transfer to laptop for data logging + real-time classification results
 
 ✅ Functional Requirements
 
@@ -32,9 +33,9 @@ Capture engine audio data via microphone
 
 Collect and store labeled dataset (normal / faulty ignition)
 
-Preprocess audio into features (MFCC, FFT, etc.)
+Preprocess audio into features
 
-Train ML model and deploy as TensorFlow Lite Micro on Photon 2
+Train ML model and deploy on Photon 2
 
 Output prediction results in real time (normal / faulty)
 
@@ -44,11 +45,9 @@ Audio recordings from multiple cars at idle:
 
 CAR_XX_NORMAL → 5 minutes of normal idle sound
 
-CAR_XX_FAULTY → 5 minutes of faulty idle sound (simulated ignition issue)
+CAR_XX_FAULTY → 5 minutes of faulty idle sound (Removed ignition coil on one cylinder)
 
-Audio segmented into smaller clips (2–4 seconds)
-
-Dataset collected with permission from KP Biler / Mikkel O. Pedersen Racing, using both stock cars and high-performance sports cars.
+Dataset collected with permission from KP Biler / Mikkel O. Pedersen Racing
 
 ⚙️ Implementation Steps
 
@@ -56,11 +55,11 @@ Set up PDM microphone on Particle Photon 2 and verify audio capture.
 
 Record engine idle sounds (normal and faulty).
 
-Segment and label dataset.
+label dataset.
 
-Train ML model (TensorFlow / Edge Impulse / similar).
+Train ML model.
 
-Convert model to TensorFlow Lite Micro and deploy to Photon 2.
+Convert model and deploy to Photon 2.
 
 Verify real-time classification performance.
 
@@ -70,7 +69,7 @@ Validation of dataset with split (train/test)
 
 Accuracy evaluation of trained ML model.
 
-Real-world test: connect Photon 2 to microphone near an idling engine and measure classification output.
+Real-world test: connect Photon 2 to microphone near an idling engine and see classification output.
 
 👤 Author
 
