@@ -57,6 +57,11 @@ Record engine idle sounds (normal and faulty).
 
 label dataset.
 
+examine dataset, find most relevant features(
+Time domain: RMS energy, Amplitude envelope, Zero-crossing rate.
+Time frequency domain: STFT.
+frequency domain: Spectral analysis, MFCC.
+
 Train ML model.
 
 Convert model and deploy to Photon 2.
