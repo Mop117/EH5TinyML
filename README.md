@@ -8,7 +8,7 @@ The goal is to design an embedded artefact on the Particle Photon 2, which can r
 🎯 Purpose
 
 The purpose is to demonstrate how embedded hardware, combined with audio preprocessing and machine learning, can be used to classify idle engine sounds in real time.
-This could potentially be used in diagnostics and maintenance of vehicles, especially for quick identification of ignition-related issues.
+This could potentially be used in diagnostics and maintenance of vehicles, for quick identification of ignition-related issues.
 
 🛠️ System Description
 
